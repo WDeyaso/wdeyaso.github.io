@@ -9,11 +9,12 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play MiniA2.</tw-noscript></noscript></tw-story>
-<tw-storydata name="MiniA2" startnode="28" creator="Twine" creator-version="2.9.2" format="Harlowe" format-version="3.3.9" ifid="F6947CF1-5419-4604-89DC-77192E9226AB" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="425,500" size="100,100">(bg:yellow)[ It’s 1527, and things are getting complicated. You’re Henry VIII, and you’ve been married to Catherine of Aragon for 18 years. She’s been a loyal queen, but there’s one big problem—no male heir. Now, you’re starting to wonder if your marriage was cursed from the start. You’re thinking of getting an annulment, but Catherine isn’t backing down without a fight. What will you do?
+<tw-storydata name="MiniA2" startnode="21" creator="Twine" creator-version="2.9.2" format="Harlowe" format-version="3.3.9" ifid="F6947CF1-5419-4604-89DC-77192E9226AB" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="425,500" size="100,100">(bg:yellow)[ It’s 1527, and things are getting complicated. You’re Henry VIII, and you’ve been married to Catherine of Aragon for 18 years. She’s been a loyal queen, but there’s one big problem—no male heir. Now, you’re starting to wonder if your marriage was cursed from the start. You’re thinking of getting an annulment, but Catherine isn’t backing down without a fight. What will you do?
 
 (after:2s)[[[Keep trying to end the marriage|Annulment]]]
 (after:3s)[[[Give up and stay married|Stay with Catherine]]]
-(after:4s)[[[Turn your attention to Anne Boleyn|Anne Boleyn]]]]</tw-passagedata><tw-passagedata pid="2" name="Annulment" tags="" position="225,625" size="100,100">Determined to annul your marriage to Catherine, you petition the Pope, arguing that your union violates biblical law. However, the Pope, influenced by Catherine’s powerful nephew, Emperor Charles V, rejects your request. Frustration grows, and some advisors suggest drastic measures, such as breaking away from the Catholic Church to gain the freedom you seek.
+(after:4s)[[[Turn your attention to Anne Boleyn|Anne Boleyn]]]]</tw-passagedata><tw-passagedata pid="2" name="Annulment" tags="" position="225,625" size="100,100">(set: $spouse to &quot;Catherine &quot;)
+Determined to annul your marriage to Catherine, you petition the Pope, arguing that your union violates biblical law. However, the Pope, influenced by Catherine’s powerful nephew, Emperor Charles V, rejects your request. Frustration grows, and some advisors suggest drastic measures, such as breaking away from the Catholic Church to gain the freedom you seek.
 
 What will your next step be?
 
@@ -32,49 +33,57 @@ How will you proceed?
 
 [[Promise Anne she will be queen, no matter the cost|Promise to Anne]]
 [[Keep Anne Close]]
-[[Return to Catherine]]</tw-passagedata><tw-passagedata pid="5" name="Reformation" tags="" position="125,750" size="100,100">With the Pope refusing to annul your marriage, you make the monumental decision to break from the Catholic Church. With the help of Thomas Cromwell and Thomas Cranmer, you establish the Church of England, granting yourself the power to annul your marriage and marry Anne Boleyn. This bold move comes at a price, as you are excommunicated and face widespread opposition from Catholics across England.
-(after:2s)[&lt;img src=&quot;https://i.pinimg.com/736x/19/ed/77/19ed77e6fb34f937b55972a4d1e7f0d8.jpg&quot; alt=&quot;annul his own marrage &quot; style=&quot;max-width:100%;&quot;&gt;
-]
-(after:3s)[What comes next?]
+[[Return to Catherine]]</tw-passagedata><tw-passagedata pid="5" name="Reformation" tags="" position="125,750" size="100,100">(set: $spouse to &quot;Catherine &quot;)
+With the Pope refusing to annul your marriage, you make a momentous decision—breaking from the Catholic Church.  
+Guided by Thomas Cromwell and Thomas Cranmer, you establish the Church of England, granting yourself the authority to annul your marriage and wed Anne Boleyn. However, this bold act comes at a steep cost. You face excommunication by the Pope and mounting opposition from devout Catholics across your kingdom.  
 
-(after:4s)[[[Anne Boleyn’s Reign]]
-[[Address the unrest caused by the Reformation|Fallout]]]</tw-passagedata><tw-passagedata pid="6" name="Last Negotiation" tags="" position="350,750" size="100,100">Negotiate with the Pope again, hoping for a different outcome.
+&lt;img 
+src=&quot;https://i.pinimg.com/736x/19/ed/77/19ed77e6fb34f937b55972a4d1e7f0d8.jpg&quot; &gt;
 
-</tw-passagedata><tw-passagedata pid="7" name="Mary’s Future" tags="" position="425,875" size="100,100">You decide that while a male heir remains elusive, your daughter Mary must be prepared for a significant political marriage to strengthen England’s alliances. However, her legitimacy is questioned due to your marriage to Anne Boleyn, putting Mary’s status at risk.
+What will you do next?  
 
-How will you secure her future?
+[[Anne Boleyn’s Reign|AnneBoleyn]]  
+[[Address the unrest caused by the Reformation|Fallout]]  
+</tw-passagedata><tw-passagedata pid="6" name="Last Negotiation" tags="" position="350,750" size="100,100">Negotiate with the Pope again, hoping for a different outcome.
 
-(after:2s)[[[Marriage for Mary]]
-[[Declare Mary Heir]]]</tw-passagedata><tw-passagedata pid="8" name="Rekindle" tags="" position="550,875" size="100,100">Rekindle your relationship with Catherine and seek her advice in ruling.</tw-passagedata><tw-passagedata pid="9" name="Affairs" tags="" position="750,875" size="100,100">Quietly pursue other romantic interests at court.
+</tw-passagedata><tw-passagedata pid="7" name="Mary’s Future" tags="" position="425,875" size="100,100">(set: $child to &quot;Mary &quot;)
+You decide that while a male heir remains elusive, your daughter Mary must be prepared for a significant political marriage to strengthen England’s alliances. However, her legitimacy is questioned due to your marriage to Anne Boleyn, putting Mary’s status at risk.  
+
+How will you secure her future?  
+
+(after:2s)[[[Marriage for Mary|MarriageForMary]]]  
+(after:3s)[[[Declare Mary Heir|DeclareMaryHeir]]]  
+</tw-passagedata><tw-passagedata pid="8" name="Rekindle" tags="" position="550,875" size="100,100">Rekindle your relationship with Catherine and seek her advice in ruling.</tw-passagedata><tw-passagedata pid="9" name="Affairs" tags="" position="750,875" size="100,100">Quietly pursue other romantic interests at court.
 
 
 &lt;img src=&quot;https://i.imgflip.com/2z3rbh.jpg&quot; alt=&quot;The marrage that shook Europe&quot; style=&quot;max-width:100%;&quot;&gt;</tw-passagedata><tw-passagedata pid="10" name="Promise to Anne" tags="" position="600,750" size="100,100">Anne Boleyn becomes your secret wife, and the court soon hears news of her pregnancy. Confident that she will bear a male heir, you are elated. However, when the child is born, it is not a boy but a girl—Elizabeth. Disappointed but hopeful for a future son, you support Anne, but as she suffers further miscarriages, tensions arise. Rumors begin circulating, questioning Anne&#39;s abilities as Queen.
 
 What will your response be?
 
-[[Support Anne]]
-[[Look for a New Queen]]</tw-passagedata><tw-passagedata pid="11" name="Keep Anne Close" tags="" position="725,750" size="100,100">Keep Anne close but avoid making any commitments about marriage.</tw-passagedata><tw-passagedata pid="12" name="Return to Catherine" tags="" position="850,750" size="100,100">End your pursuit of Anne and focus on repairing your marriage to Catherine.</tw-passagedata><tw-passagedata pid="13" name="Anne Boleyn’s Reign" tags="" position="50,875" size="100,100">Marry Anne Boleyn and proceed with your quest for a male heir.</tw-passagedata><tw-passagedata pid="14" name="Fallout" tags="" position="150,875" size="100,100">(bg:grey)[The establishment of the Church of England has stirred rebellion in the north, with uprisings such as the Pilgrimage of Grace. Many are unhappy with the dissolution of monasteries, and even some of your own noblemen question your authority. Your new queen, Anne, is also struggling to gain acceptance at court.
+[[Support Anne]] 
+[[Look for a New Queen]] </tw-passagedata><tw-passagedata pid="11" name="Keep Anne Close" tags="" position="725,750" size="100,100">Keep Anne close but avoid making any commitments about marriage.</tw-passagedata><tw-passagedata pid="12" name="Return to Catherine" tags="" position="850,750" size="100,100">End your pursuit of Anne and focus on repairing your marriage to Catherine.</tw-passagedata><tw-passagedata pid="13" name="Fallout" tags="" position="150,875" size="100,100">(bg:grey)[The establishment of the Church of England has stirred rebellion in the north, with uprisings such as the Pilgrimage of Grace. Many are unhappy with the dissolution of monasteries, and even some of your own noblemen question your authority. Your new queen, Anne, is also struggling to gain acceptance at court.
+(set: $spouse to &quot;Mary Anne Boleyn &quot;)
 
 How will you handle the turmoil?
 
 //[[Crush the rebellions with military force|Crush Rebellions]]
-[[Reconcile]]//]</tw-passagedata><tw-passagedata pid="15" name="Crush Rebellions" tags="" position="50,1025" size="100,100">You decide to meet the rebellions head-on with military force, sending a clear message that disobedience will not be tolerated. The Pilgrimage of Grace is brutally suppressed, but at the cost of alienating many former supporters. Your kingdom is now held together by force rather than loyalty, and the consequences may last for generations.
+[[Reconcile]]//]</tw-passagedata><tw-passagedata pid="14" name="Crush Rebellions" tags="" position="50,1025" size="100,100">You decide to meet the rebellions head-on with military force, sending a clear message that disobedience will not be tolerated. The Pilgrimage of Grace is brutally suppressed, but at the cost of alienating many former supporters. Your kingdom is now held together by force rather than loyalty, and the consequences may last for generations.
 &lt;img 
 src=&quot;https://brewminate.com/wp-content/uploads/2020/05/051120-66-History-Religion-Pilgrimage-Grace.jpg&quot; alt=&quot;annul his own marrage &quot; style=&quot;max-width:100%;&quot;&gt;
 
-(bg:orange)[[[Seek a New Queen]]
-[[Reconciliation]]]</tw-passagedata><tw-passagedata pid="16" name="Reconcile" tags="" position="225,1000" size="100,100">Attempt to make peace with the Catholic nobility and promise reforms.</tw-passagedata><tw-passagedata pid="17" name="Seek a New Queen" tags="" position="25,1150" size="100,100">(bg:#94d82d)[Anne’s repeated failures to produce a son have made you impatient. Jane Seymour, a gentle and obedient lady-in-waiting, seems like a suitable alternative. As your attraction grows, so does your desire for a fresh start. However, Anne will not go quietly, and rumors of her infidelity could provide an excuse to end your marriage.
+(bg:orange)[[Seek a New Queen]]
+[[Reconciliation]]</tw-passagedata><tw-passagedata pid="15" name="Reconcile" tags="" position="225,1025" size="100,100">Attempt to make peace with the Catholic nobility and promise reforms.</tw-passagedata><tw-passagedata pid="16" name="Seek a New Queen" tags="" position="25,1150" size="100,100">(bg:#94d82d)[Anne’s repeated failures to produce a son have made you impatient. Jane Seymour, a gentle and obedient lady-in-waiting, seems like a suitable alternative. As your attraction grows, so does your desire for a fresh start. However, Anne will not go quietly, and rumors of her infidelity could provide an excuse to end your marriage.
 //
 [[Accuse Anne]]
-[[Support Anne]]//]</tw-passagedata><tw-passagedata pid="18" name="Reconciliation" tags="" position="175,1150" size="100,100">Reflect on your actions and try to ease the discontent in your realm.</tw-passagedata><tw-passagedata pid="19" name="Support Anne" tags="" position="537.5,1000" size="100,100">Support Anne and dismiss the rumors as baseless gossip.</tw-passagedata><tw-passagedata pid="20" name="Look for a New Queen" tags="" position="662.5,1000" size="100,100">Start considering Jane Seymour as a potential new queen.
-
+[[Support Anne]]//]</tw-passagedata><tw-passagedata pid="17" name="Reconciliation" tags="" position="175,1150" size="100,100">Reflect on your actions and try to ease the discontent in your realm.</tw-passagedata><tw-passagedata pid="18" name="Support Anne" tags="" position="537.5,1000" size="100,100">Support Anne and dismiss the rumors as baseless gossip.</tw-passagedata><tw-passagedata pid="19" name="Look for a New Queen" tags="" position="662.5,1000" size="100,100">Start considering Jane Seymour as a potential new queen.
+(set: $spouse to &quot;Jane Seymour &quot;)
 
 (after:2s)[&lt;img 
 src=&quot;https://cdn.britannica.com/98/222798-050-EE81138C/Jane-Seymour-portrait-by-Hans-Holbein-the-Younger.jpg&quot; alt=&quot;annul his own marrage &quot; style=&quot;max-width:100%;&quot;&gt;]
-</tw-passagedata><tw-passagedata pid="21" name="Marriage for Mary" tags="" position="362.5,1125" size="100,100">Arrange a prestigious marriage for Mary with a foreign prince.</tw-passagedata><tw-passagedata pid="22" name="Declare Mary Heir" tags="" position="487.5,1125" size="100,100">Declare Mary your official heir and work to restore her legitimacy.</tw-passagedata><tw-passagedata pid="23" name="Accuse Anne" tags="" position="50,1275" size="100,100">Accuse Anne of treason and pursue Jane Seymou.</tw-passagedata><tw-passagedata pid="24" name="[Seek a New Queen" tags="" position="175,1275" size="100,100"></tw-passagedata><tw-passagedata pid="25" name="Welcome to the Tudor court, where every decision can change the course of history! As Henry VIII, you’ll navigate a world full of love, power, betrayal, and ambition. The fate of England—and your legacy—depends on the choices you make. Will you secure an heir, outsmart your rivals, or end up with more enemies than friends? Your actions will shape not only your own life but the future of the kingdom." tags="" position="550,475" size="100,100">(set: $Start to &quot;Here is&quot;)</tw-passagedata><tw-passagedata pid="26" name="[Anne Boleyn’s Reign" tags="" position="125,1500" size="100,100"></tw-passagedata><tw-passagedata pid="27" name="[Marriage for Mary" tags="" position="425,1000" size="100,100"></tw-passagedata><tw-passagedata pid="28" name="The Drama Marriages of Henry VIII" tags="" position="425,350" size="100,100">(text-colour:#3b5bdb)[[Welcome to the Tudor court, where every decision can change the course of history! As Henry VIII, you’ll navigate a world full of love, power, betrayal, and ambition. The fate of England—and your legacy—depends on the choices you make. Will you secure an heir, outsmart your rivals, or end up with more enemies than friends? Your actions will shape not only your own life but the future of the kingdom.]]
+</tw-passagedata><tw-passagedata pid="20" name="Accuse Anne" tags="" position="50,1275" size="100,100">Accuse Anne of treason and pursue Jane Seymou.</tw-passagedata><tw-passagedata pid="21" name="The Drama Marriages of Henry VIII" tags="" position="425,350" size="100,100">(text-colour:#3b5bdb)[Welcome to the Tudor court, where every decision can change the course of history! As Henry VIII, you’ll navigate a world full of love, power, betrayal, and ambition. The fate of England—and your legacy—depends on the choices you make. Will you secure an heir, outsmart your rivals, or end up with more enemies than friends? Your actions will shape not only your own life but the future of the kingdom.]
 
 (after:2s)[(text-colour:green)[//&#39;&#39;[[Start Your Journey|Start]]&#39;&#39;//]]
-</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="22" name="AnneBoleyn" tags="" position="25,875" size="100,100">Marry Anne Boleyn and proceed with your quest for a male heir.</tw-passagedata><tw-passagedata pid="23" name="MarriageForMary" tags="" position="362.5,1250" size="100,100">Arrange a prestigious marriage for Mary with a foreign prince.</tw-passagedata><tw-passagedata pid="24" name="DeclareMaryHeir" tags="" position="487.5,1250" size="100,100">Declare Mary your official heir and work to restore her legitimacy.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
